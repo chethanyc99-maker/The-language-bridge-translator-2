@@ -1,0 +1,11 @@
+{
+  "name": "Remix: Remix: Language Bridge Storyteller",
+  "description": "An AI-powered multilingual storytelling platform, live translator, and interactive language-learning assistant.",
+  "requestFramePermissions": [
+    "microphone",
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

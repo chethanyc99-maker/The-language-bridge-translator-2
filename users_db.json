@@ -1,0 +1,16 @@
+[
+  {
+    "email": "admin@languagebridge.com",
+    "name": "Administrator",
+    "passwordHash": "admin",
+    "level": 10,
+    "xp": 999,
+    "storiesReadCount": 88,
+    "languagesCount": 12,
+    "badgesCount": 25,
+    "storyProgress": 100,
+    "dailyChallengeWordsDone": 5,
+    "translationsCount": 142,
+    "chatMessagesCount": 97
+  }
+]

@@ -1,0 +1,510 @@
+@import "tailwindcss";
+
+/* Glassmorphism Theme scoped to the Login Page */
+.glass-login-theme {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff) !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  padding: 20px;
+}
+
+/* Glass Container */
+.glass-login-theme .glass-container {
+  width: 500px;
+  max-width: 100%;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px) saturate(180%);
+  -webkit-backdrop-filter: blur(15px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  text-align: center;
+}
+
+.glass-login-theme h1 {
+  color: rgba(255, 255, 255, 0.9) !important;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* Align inputs beautifully with custom padding for the icons */
+.glass-login-theme input {
+  width: 100% !important;
+  padding: 12px 12px 12px 42px !important;
+  margin: 10px 0 !important;
+  border-radius: 10px !important;
+  border: none !important;
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: rgb(11, 10, 10) !important;
+  outline: none !important;
+  font-size: 14px !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.glass-login-theme input::placeholder {
+  color: rgba(12, 11, 11, 0.55) !important;
+}
+
+/* Glass Button and interactions */
+.glass-login-theme button.glass-btn {
+  margin-top: 10px !important;
+  padding: 12px !important;
+  width: 100% !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: white !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  backdrop-filter: blur(100px) !important;
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4) !important;
+  transition: all 0.5s ease !important;
+}
+
+.glass-login-theme button.glass-btn:hover {
+  background: rgba(255, 255, 255, 0.4) !important;
+  color: black !important;
+  transform: scale(1.05) !important;
+}
+
+.glass-login-theme button.glass-btn:active {
+  transform: scale(0.95) !important;
+}
+
+
+/* --- Real-time Learning App color theme updates --- */
+
+/* App level root overrides */
+:root {
+  --color-bg-main: #0B0E17;
+  --color-panel-neutral: rgba(255, 255, 255, 0.08);
+  --color-active-user: #007AFF; /* iOS High-Vibrancy Royal Blue */
+  --color-active-ai: #00B4D8;
+  --color-highlight-cyan: #00F5D4;
+  --color-text-crisp: #FFFFFF;
+  --color-text-soft: #A0AAB2;
+}
+
+/* Base Body settings with custom iOS Liquid Wallpaper blend */
+body, html, #root {
+  background: linear-gradient(135deg, #0f172a, #1e1b4b, #0f172a) !important;
+  color: #f1f5f9 !important;
+  transition: background 0.3s ease, color 0.3s ease !important;
+}
+
+body.light, body.light html, body.light #root {
+  background: linear-gradient(135deg, #f8fafc, #edf2f7, #f8fafc) !important;
+  color: #1e293b !important;
+}
+
+/* Background overrides: Match rich liquid dark mode background */
+.bg-\[\#070519\], 
+[class*="bg-[#070519]"],
+.bg-\[\#040411\], 
+[class*="bg-[#040411]"],
+.theme-bg-main {
+  background: linear-gradient(135deg, #090d16, #110e20, #090d16) !important;
+  transition: background 0.3s ease !important;
+}
+
+body.light .bg-\[\#070519\], 
+body.light [class*="bg-[#070519]"],
+body.light .bg-\[\#040411\], 
+body.light [class*="bg-[#040411]"],
+body.light .theme-bg-main {
+  background: linear-gradient(135deg, #f1f5f9, #edf2f7, #f1f5f9) !important;
+}
+
+/* Panel and Sidebar overrides: True Apple-style Liquid Glass premium frosted overlays */
+.bg-\[\#0a0b1f\], [class*="bg-[#0a0b1f]"],
+.bg-\[\#0b0c24\], [class*="bg-[#0b0c24]"],
+.bg-\[\#11122a\], [class*="bg-[#11122a]"],
+.bg-\[\#121435\], [class*="bg-[#121435]"],
+.bg-\[\#0c0d28\], [class*="bg-[#0c0d28]"],
+.bg-\[\#11122e\], [class*="bg-[#11122e]"],
+.bg-\[\#1b1c3c\], [class*="bg-[#1b1c3c]"],
+.bg-\[\#131438\], [class*="bg-[#131438]"],
+.bg-\[\#1a2232\], [class*="bg-[#1a2232]"],
+.ios-glass-panel {
+  background: rgba(255, 255, 255, 0.15) !important; /* Frost White with 15% opacity requested */
+  backdrop-filter: blur(10px) saturate(180%) !important; /* 10px Apple Blur effect */
+  -webkit-backdrop-filter: blur(10px) saturate(180%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important; /* 1px solid 30% border requested */
+  box-shadow: 
+    0 10px 32px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4) !important; /* Inner highlight bevel */
+  color: #FFFFFF !important;
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+body.light .bg-\[\#0a0b1f\], body.light [class*="bg-[#0a0b1f]"],
+body.light .bg-\[\#0b0c24\], body.light [class*="bg-[#0b0c24]"],
+body.light .bg-\[\#11122a\], body.light [class*="bg-[#11122a]"],
+body.light .bg-\[\#121435\], body.light [class*="bg-[#121435]"],
+body.light .bg-\[\#0c0d28\], body.light [class*="bg-[#0c0d28]"],
+body.light .bg-\[\#11122e\], body.light [class*="bg-[#11122e]"],
+body.light .bg-\[\#1b1c3c\], body.light [class*="bg-[#1b1c3c]"],
+body.light .bg-\[\#131438\], body.light [class*="bg-[#131438]"],
+body.light .bg-\[\#1a2232\], body.light [class*="bg-[#1a2232]"],
+body.light .ios-glass-panel {
+  background: rgba(255, 255, 255, 0.65) !important; /* Smooth soft light glass */
+  backdrop-filter: blur(18px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(190%) !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 
+    0 8px 24px rgba(0, 0, 0, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5) !important;
+  color: #1e293b !important;
+}
+
+/* Specific custom iOS Liquid Glass Cards requested */
+.ios-liquid-card {
+  background: rgba(255, 255, 255, 0.15) !important; /* Frost White: rgba(255, 255, 255, 0.15) */
+  backdrop-filter: blur(10px) saturate(180%) !important; /* 10px Blur effect */
+  -webkit-backdrop-filter: blur(10px) saturate(180%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important; /* Border for definition */
+  border-radius: 20px !important; /* iOS rounded corner */
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45) !important;
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+body.light .ios-liquid-card {
+  background: rgba(255, 255, 255, 0.55) !important;
+  backdrop-filter: blur(20px) saturate(170%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(170%) !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Glassmorphism Color Palettes & Custom Layers exactly requested by user */
+.glass-frost-white {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  backdrop-filter: blur(10px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(10px) saturate(180%) !important;
+}
+
+.glass-soft-gray {
+  background: rgba(224, 224, 224, 0.1) !important; /* Soft Gray Tint */
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  backdrop-filter: blur(10px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(10px) saturate(150%) !important;
+}
+
+.glass-blue-glow {
+  background: rgba(0, 191, 255, 0.2) !important; /* Highlight Blue Glow */
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  backdrop-filter: blur(10px) saturate(200%) !important;
+  -webkit-backdrop-filter: blur(10px) saturate(200%) !important;
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.25) !important;
+}
+
+/* Align nested elements or sub-widgets to use Soft Gray glass internally */
+textarea, .glass-gray-panel {
+  background: rgba(224, 224, 224, 0.1) !important; /* Soft Gray Tint */
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  backdrop-filter: blur(10px) saturate(150%) !important;
+}
+
+body.light textarea, body.light .glass-gray-panel {
+  background: rgba(0, 0, 0, 0.03) !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Lighten transparent borders for a seamless UI blend */
+.border-white\/5, [class*="border-white/5"] {
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+.border-white\/10, [class*="border-white/10"] {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+.border-white\/15, [class*="border-white/15"] {
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Active tab selector overrides -> iOS Siri Dynamic Liquid Gradient */
+/* Sidebar active highlight items and custom accent classes */
+.bg-purple-600, 
+[class*="bg-purple-600"],
+[class*="hover\:bg-purple-600"]:hover,
+.bg-purple-500,
+[class*="bg-purple-500"] {
+  background: linear-gradient(135deg, #007AFF 0%, #00F5D4 50%, #FF2D55 100%) !important;
+  background-size: 200% 200% !important;
+  animation: liquidGradient 6s ease infinite !important;
+  color: white !important;
+  box-shadow: 0 4px 20px rgba(0, 122, 255, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  font-weight: 600 !important;
+}
+
+@keyframes liquidGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Hover highlights for active tabs and custom buttons */
+.hover\:bg-purple-700:hover, 
+[class*="hover:bg-purple-700"]:hover {
+  background: linear-gradient(135deg, #0056B3 0%, #00C4AB 50%, #D81B43 100%) !important;
+  background-size: 200% 200% !important;
+  animation: liquidGradient 3s ease infinite !important;
+  color: white !important;
+}
+
+/* Redefining text colors previously using purple to use dynamic high-vibrancy iOS colours */
+.text-purple-400, [class*="text-purple-400"] {
+  color: #00F5D4 !important; /* Cyber Teal */
+}
+body.light .text-purple-400, body.light [class*="text-purple-400"] {
+  color: #0D9488 !important; /* Rich Teal for light mode */
+}
+
+.text-purple-300, [class*="text-purple-300"] {
+  color: #007AFF !important; /* Live iOS Blue */
+}
+
+/* Soft text overrides matching the crisp aesthetic */
+.text-slate-300 {
+  color: #CBD5E1 !important; /* Beautiful readable light slate */
+}
+body.light .text-slate-300 {
+  color: #334155 !important; /* Dark slate 700 */
+}
+
+.text-slate-400, [class*="text-slate-400"], .text-\[\#bfc1e4\], [class*="text-[#bfc1e4]"] {
+  color: #94A3B8 !important; /* Muted slate */
+}
+body.light .text-slate-400, body.light [class*="text-slate-400"], body.light .text-\[\#bfc1e4\], body.light [class*="text-[#bfc1e4]"] {
+  color: #475569 !important; /* Slate 600 */
+}
+
+.text-slate-500, [class*="text-slate-500"] {
+  color: #64748B !important;
+}
+body.light .text-slate-500, body.light [class*="text-slate-500"] {
+  color: #64748B !important;
+}
+
+.text-slate-600, [class*="text-slate-600"] {
+  color: #475569 !important;
+}
+body.light .text-slate-600, body.light [class*="text-slate-600"] {
+  color: #94A3B8 !important; /* Lighter slate */
+}
+
+.text-slate-100, .text-white, [class*="text-white"], [class*="text-slate-100"] {
+  color: #FFFFFF !important; /* High contrast white */
+}
+body.light .text-slate-100, body.light .text-white, body.light [class*="text-white"], body.light [class*="text-slate-100"] {
+  color: #0f172a !important; /* Deep dark slate */
+}
+
+/* Align sub-labels and title strings to crisp white */
+h1, h2, h3, h4, .font-bold.text-white {
+  color: #FFFFFF !important;
+}
+body.light h1, body.light h2, body.light h3, body.light h4, body.light .font-bold.text-white {
+  color: #0f172a !important;
+}
+
+/* Ensure placeholder text and input color works beautifully on dark liquid glass */
+input, select, textarea {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(15px) saturate(180%) !important;
+}
+body.light input, body.light select, body.light textarea {
+  background: rgba(255, 255, 255, 0.7) !important;
+  color: #0f172a !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.45) !important;
+}
+body.light input::placeholder {
+  color: rgba(15, 23, 42, 0.45) !important;
+}
+
+/* Bright Cyan/Teal (#00F5D4) highlights */
+.text-cyan-400, [class*="text-cyan-400"] {
+  color: var(--color-highlight-cyan) !important;
+}
+body.light .text-cyan-400, body.light [class*="text-cyan-400"] {
+  color: #007AFF !important; /* High contrast blue instead of cyan for readability */
+}
+
+.border-cyan-400, [class*="border-cyan-400"] {
+  border-color: var(--color-highlight-cyan) !important;
+}
+body.light .border-cyan-400, body.light [class*="border-cyan-400"] {
+  border-color: #007AFF !important;
+}
+
+/* Touch active status indicator badge */
+.absolute.right-2.top-1\/2.-translate-y-1\/2.w-1\.5.h-1\.5.bg-white {
+  background-color: var(--color-highlight-cyan) !important;
+}
+body.light .absolute.right-2.top-1\/2.-translate-y-1\/2.w-1\.5.h-1\.5.bg-white {
+  background-color: #007AFF !important;
+}
+
+
+/* --- iOS liquid backdrop floating animations --- */
+
+@keyframes floatLiquid1 {
+  0% {
+    transform: translate(0px, 0px) scale(1) rotate(0deg);
+  }
+  33% {
+    transform: translate(60px, -80px) scale(1.15) rotate(60deg);
+  }
+  66% {
+    transform: translate(-50px, 40px) scale(0.9) rotate(-40deg);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes floatLiquid2 {
+  0% {
+    transform: translate(0px, 0px) scale(1) rotate(0deg);
+  }
+  40% {
+    transform: translate(-70px, 50px) scale(0.92) rotate(-30deg);
+  }
+  70% {
+    transform: translate(40px, -40px) scale(1.08) rotate(45deg);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes floatLiquid3 {
+  0% {
+    transform: translate(0px, 0px) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translate(40px, 70px) scale(1.12) rotate(80deg);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1) rotate(0deg);
+  }
+}
+
+.animate-float-liquid-slow {
+  animation: floatLiquid1 24s ease-in-out infinite;
+}
+
+.animate-float-liquid-medium {
+  animation: floatLiquid2 18s ease-in-out infinite;
+}
+
+.animate-float-liquid-fast {
+  animation: floatLiquid3 14s ease-in-out infinite;
+}
+
+/* Dynamic Spring Physical Active/Touch Bounce Interactions */
+button,
+[role="button"],
+select,
+input[type="button"],
+input[type="submit"],
+.interactive-card,
+.popular-lang-btn,
+.sidebar-tab,
+.challenge-item,
+.phrase-card,
+.partner-card,
+.story-item-card,
+.bounce-target {
+  transition: transform 0.28s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+/* Hover State - Dynamic Increased Spring Bounce (Bouncing Upwards) */
+button:hover:not(:disabled),
+[role="button"]:hover:not(:disabled),
+.interactive-card:hover,
+.popular-lang-btn:hover,
+.sidebar-tab:hover,
+.challenge-item:hover,
+.phrase-card:hover,
+.partner-card:hover,
+.story-item-card:hover,
+.bounce-target:hover {
+  transform: translateY(-8px) scale(1.04) !important;
+  box-shadow: 0 16px 36px rgba(0, 122, 255, 0.25) !important;
+}
+
+/* Active Pressed State - Spring Push-Down Bounce */
+button:active:not(:disabled),
+[role="button"]:active:not(:disabled),
+select:active,
+input[type="button"]:active,
+input[type="submit"]:active,
+.interactive-card:active,
+.popular-lang-btn:active,
+.sidebar-tab:active,
+.challenge-item:active,
+.phrase-card:active,
+.partner-card:active,
+.story-item-card:active,
+.bounce-target:active {
+  transform: scale(0.91) translateY(4px) !important;
+  transition: transform 0.08s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+/* Letter and Text Highlight on Bounce (Hover/Active states) */
+button:hover p, button:hover span, button:hover h1, button:hover h2, button:hover h3, button:hover h4, button:hover h5, button:hover h6, button:hover div,
+.interactive-card:hover p, .interactive-card:hover span, .interactive-card:hover h1, .interactive-card:hover h2, .interactive-card:hover h3, .interactive-card:hover h4, .interactive-card:hover h5,
+.popular-lang-btn:hover span, .popular-lang-btn:hover p,
+.sidebar-tab:hover span, .sidebar-tab:hover svg,
+.challenge-item:hover h4, .challenge-item:hover p,
+.phrase-card:hover span,
+.partner-card:hover p, .partner-card:hover h4,
+.story-item-card:hover h5, .story-item-card:hover p,
+.bounce-target:hover * {
+  color: #00F5D4 !important; /* Vivid illuminated teal letter highlighting */
+  text-shadow: 0 0 12px rgba(0, 245, 212, 0.75) !important;
+  transition: color 0.16s ease, text-shadow 0.16s ease !important;
+}
+
+/* Light mode specific highlighted letters for high readability */
+body.light button:hover p, body.light button:hover span, body.light button:hover h1, body.light button:hover h2, body.light button:hover h3, body.light button:hover h4, body.light button:hover h5, body.light button:hover h6, body.light button:hover div,
+body.light .interactive-card:hover p, body.light .interactive-card:hover span, body.light .interactive-card:hover h1, body.light .interactive-card:hover h2, body.light .interactive-card:hover h3, body.light .interactive-card:hover h4, body.light .interactive-card:hover h5,
+body.light .popular-lang-btn:hover span, body.light .popular-lang-btn:hover p,
+body.light .sidebar-tab:hover span, body.light .sidebar-tab:hover svg,
+body.light .challenge-item:hover h4, body.light .challenge-item:hover p,
+body.light .phrase-card:hover span,
+body.light .partner-card:hover p, body.light .partner-card:hover h4,
+body.light .story-item-card:hover h5, body.light .story-item-card:hover p,
+body.light .bounce-target:hover * {
+  color: #007AFF !important; /* Beautiful deep iOS blue */
+  text-shadow: 0 0 8px rgba(0, 122, 255, 0.4) !important;
+}
+
+/* High contrast white selections for crisp reading experience */
+::selection {
+  background-color: rgba(0, 122, 255, 0.3) !important;
+  color: #FFFFFF !important;
+}
+
+
